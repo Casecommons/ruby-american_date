@@ -39,10 +39,10 @@ describe "Date.parse" do
     Date.parse('2003/01/02').should == Date.new(2003, 1, 2)
   end
 
-  specify "should behave like 1.8 and only allow / as delimiters in american-style dates" do
+  specify "should allow '/', '-', & '.' as American-date delimiters" do
     Date.parse("10/11/2012").should == Date.new(2012, 10, 11)
-    Date.parse("10-11-2012").should == Date.new(2012, 11, 10)
-    Date.parse("10.11.2012").should == Date.new(2012, 11, 10)
+    Date.parse("10-11-2012").should == Date.new(2012, 10, 11)
+    Date.parse("10.11.2012").should == Date.new(2012, 10, 11)
   end
 
   if RUBY_VERSION > '1.9'
