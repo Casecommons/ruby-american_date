@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.files = %w(MIT-LICENSE CHANGELOG README.rdoc Rakefile) + Dir["{spec,lib}/american_date*.rb"]
 
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec', '~> 2.14'
   s.add_development_dependency 'rdoc'
 end
